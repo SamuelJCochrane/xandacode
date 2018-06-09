@@ -1,0 +1,45 @@
+.game-display-small {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    &--cover-img {
+        height: 6rem;
+        width: auto;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.37);
+    }
+
+    &__middle-content {
+        font-size: 1.3rem;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        margin-left: 2rem;
+        padding: .7rem;
+        justify-content: space-between;
+
+        &__price-box {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-top: .5rem;
+
+            &--coins-img {
+                height: 1.5rem;
+                width: auto;
+                margin-right: 1rem;
+            }
+        }   
+    }
+
+    &--bin-img {
+        margin-left: auto;
+        height: 2.5rem;
+        width: auto;
+        transition: all .1s ease-in-out;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.3);
+        }
+    }
+}

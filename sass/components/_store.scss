@@ -1,0 +1,17 @@
+.product-display {
+    position: absolute;
+    top: 20rem;
+    left: $left-margin;
+    display: flex;
+    flex-direction: column;
+
+    &__row {
+        display: flex;
+        flex-direction: row;
+        padding-bottom: $distance-between-boxes;
+
+        & > *:first-child {
+            margin-right: $distance-between-boxes;
+        }
+    }
+}

@@ -1,0 +1,76 @@
+.basket {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    width: 40rem;
+    height: 100%;
+    background-color: $box-green;
+    z-index: 100;
+    padding: 3.5rem 3rem 10rem 3rem;
+    box-sizing: border-box;
+    //justify-content: space-between;
+
+    &--title {
+        font-size: 4rem;
+        font-weight: bold;
+    }
+
+    &__products {
+
+        &--title {
+            font-size: 4rem;
+            font-weight: 1000;
+            margin: 0;
+            margin-bottom: 4rem;
+        }
+
+        &--line {
+            height: .1rem;
+            width: 100%;
+            background-color: black;
+            margin-top: 4rem;
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__footer {
+        position: absolute;
+        bottom: 5rem;
+        width: 35rem;
+
+        &__price-box {
+            font-size: 2rem;
+            font-weight: bold;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 5rem;
+
+            &--total {
+                color: rgb(88, 88, 88);
+            }
+        }
+
+        &__continue-btn {
+            font-size: 1.5rem;
+            color: white;
+            background-color: black;
+            width: 100%;
+            height: 5rem;
+            border-radius: 10rem;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 5rem;
+
+            &:hover {
+                cursor: pointer;
+            }
+                
+            &:active {
+                transform: translateY(.2rem);
+            }            
+        }
+    }
+}
