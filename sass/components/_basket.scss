@@ -60,6 +60,7 @@
         }
 
         &__continue-btn {
+            position: relative;
             font-size: 1.5rem;
             color: white;
             background-color: black;
@@ -70,13 +71,26 @@
             vertical-align: middle;
             line-height: 5rem;
 
-            &:hover {
-                cursor: pointer;
+            &--selected {
+
+                &:hover {
+                    cursor: pointer;
+                }
+                    
+                &:active {
+                    transform: translateY(.2rem);
+                }         
             }
-                
-            &:active {
-                transform: translateY(.2rem);
-            }            
+            &__grey-out {
+                position: absolute;
+                left: 0rem;
+                top: 0rem;
+                background-color: $box-green;
+                opacity: .8;
+                width: 100%;
+                height: 100%;
+                // z-index: 100;
+            }
         }
     }
 }

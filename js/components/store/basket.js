@@ -9,7 +9,7 @@ export class Basket extends Component {
 
         this.state = {
             basket: this.props.basket,
-            removeFromBasket: this.props.removeFromBasket
+            removeFromBasket: this.props.removeFromBasket,
         }
 
         //this.removeFromBasket = this.props.removeFromBasket;
@@ -29,7 +29,6 @@ export class Basket extends Component {
 
     render() {
         return (
-            <Router>
                 <div className="basket">
                     <span className="basket--title">Basket</span>
                     {   this.state.basket.length > 0 ?
@@ -54,14 +53,19 @@ export class Basket extends Component {
                     <div className="basket__footer">
                         <div className="basket__footer__price-box">
                             <span className="basket__footer__price-box--total">Total</span>
-                            <span className="basket__footer__price-box--price">800 Gli</span>
+                            <span className="basket__footer__price-box--price">{this.state.basket.reduce((acc, curr)=>acc+curr.price, 0)} Gli</span>
                         </div>
-                        <Link to="/checkout" style={{ textDecoration: 'none' }}>
-                            <div className="basket__footer__continue-btn" onClick={this.testFunc}>Continue</div>
+                        
+                        <Link to={this.state.basket.length>0 ? "/checkout" : "/"} style={{ textDecoration: 'none' }}>
+                            <div className={`basket__footer__continue-btn ${this.state.basket.length>0 ? "basket__footer__continue-btn--selected": ""}`}>
+                                {   this.state.basket.length === 0 &&
+                                    <div className="basket__footer__continue-btn__grey-out"></div>
+                                }       
+                                Continue
+                            </div>
                         </Link>
                     </div>
                 </div>
-            </Router>
         )
     }
 }
