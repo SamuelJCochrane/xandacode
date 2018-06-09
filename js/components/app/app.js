@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 
 import {Store} from '../store/store';
 import {Basket} from '../store/basket';
@@ -53,27 +54,29 @@ export class App extends Component {
 
     render() {
         return (
-            <div className="app">
-                <div className="background-img-container">
-                    <img className="background-img-container__background-img" src={background}/>
-                </div>
-                <div className="background-container">
-                    <div className="background-container__header">
-                        <img className="background-container__header--img" src={telephone} alt="telephone"/>
-                        <p>1337 1337 1337</p>
-                        <img className="background-container__header--img" src={flag} alt="flag"/>
-                        <p>Try another Castle </p>
+            <Router>
+                <div className="app">
+                    <div className="background-img-container">
+                        <img className="background-img-container__background-img" src={background}/>
                     </div>
-                    <img className="background-container__logo-img" src={logo} alt="game hub logo" onClick={this.testFunc}/>
+                    <div className="background-container">
+                        <div className="background-container__header">
+                            <img className="background-container__header--img" src={telephone} alt="telephone"/>
+                            <p>1337 1337 1337</p>
+                            <img className="background-container__header--img" src={flag} alt="flag"/>
+                            <p>Try another Castle </p>
+                        </div>
+                        <img className="background-container__logo-img" src={logo} alt="game hub logo" onClick={this.testFunc}/>
+                    </div>
+                    <Store
+                        games={this.state.games}
+                        addToBasket={this.addToBasket}
+                    />
+                    <Basket
+                        basket={this.state.basket}
+                        removeFromBasket={this.removeFromBasket}/>
                 </div>
-                <Store
-                    games={this.state.games}
-                    addToBasket={this.addToBasket}
-                />
-                <Basket
-                    basket={this.state.basket}
-                    removeFromBasket={this.removeFromBasket}/>
-            </div>
+            </Router>
         )
     }
 }

@@ -17,6 +17,12 @@
         font-weight: bold;
     }
 
+    &--no-items {
+        font-size: 2rem;
+        color: $dark-grey;
+        margin: auto auto;
+    }
+
     &__products {
 
         &--title {
@@ -49,7 +55,7 @@
             margin-bottom: 5rem;
 
             &--total {
-                color: rgb(88, 88, 88);
+                color: $dark-grey;
             }
         }
 
