@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
-import {GameDisplaySmall} from '../shared/game-display-small';
+import {GameDisplaySmall} from '../game-display-small/game-display-small';
 
 export class Basket extends Component {
 

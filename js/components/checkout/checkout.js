@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
-import { GameDisplaySmall } from "../shared/game-display-small";
+import { GameDisplaySmall } from "../game-display-small/game-display-small";
 
 export class Checkout extends Component {
   constructor(props) {

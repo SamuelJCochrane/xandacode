@@ -11,17 +11,12 @@ export class GameDisplaySmall extends Component {
         }
 
         this.removeFromBasket = this.props.removeFromBasket;
-        this.testFunc = this.testFunc.bind(this);
-    }
-
-    testFunc() {
-        console.log(this.state)
     }
 
     render() {
         return (
             <div className="game-display-small">
-                <img src={this.state.game.image} className="game-display-small--cover-img" onClick={this.testFunc}/>
+                <img src={this.state.game.image} className="game-display-small--cover-img"/>
                 <div className="game-display-small__middle-content">
                     <span className="game-display-small__middle-content--title">{this.state.game.title}</span>
                     <div className="game-display-small__middle-content__price-box">
@@ -29,7 +24,7 @@ export class GameDisplaySmall extends Component {
                         <span className="game-display-small__middle-content__price-box--text">{this.state.game.price} gli</span>
                     </div>
                 </div>
-                <img src={bin} className="game-display-small--bin-img" onClick={() => {console.log(this.state.game); this.removeFromBasket(this.state.game)}}/>
+                <img src={bin} className="game-display-small--bin-img" onClick={() => {this.removeFromBasket(this.state.game)}}/>
             </div>
         )
     }

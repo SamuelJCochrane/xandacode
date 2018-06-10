@@ -1,8 +1,11 @@
 @import './base/base';
 @import './variables';
-@import './components/app';
-@import './components/game-display-large';
-@import './components/store';
-@import './components/basket';
-@import './components/game-display-small';
-@import './components/_checkout.scss'
+
+@import '../js/components/app/_app.scss';
+@import '../js/components/background/_background.scss';
+@import '../js/components/basket/_basket.scss';
+@import '../js/components/checkout/_checkout.scss';
+@import '../js/components/game-display-large/_game-display-large.scss';
+@import '../js/components/game-display-small/_game-display-small.scss';
+@import '../js/components/store/_store.scss';
+

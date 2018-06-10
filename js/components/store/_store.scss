@@ -1,0 +1,20 @@
+.store {
+    padding-top: 25rem;
+
+    &__product-display {
+        margin-left: $left-margin;
+        display: flex;
+        flex-direction: column;
+        z-index: 2;
+
+        &__row {
+            display: flex;
+            flex-direction: row;
+            padding-bottom: $distance-between-boxes;
+
+            & > *:first-child {
+                margin-right: $distance-between-boxes;
+            }
+        }
+    }
+}

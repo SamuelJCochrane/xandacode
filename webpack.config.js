@@ -48,6 +48,10 @@ module.exports = {
 				include: path.join(__dirname, 'js'),
 			},
 			{
+				test: /\.css$/,
+				use: [ 'style-loader', 'css-loader' ]
+			},
+			{
 				test: /\.scss?/,
 				loaders: ['style-loader', 'css-loader', 'sass-loader'],
 				include: path.join(__dirname, 'sass'),
