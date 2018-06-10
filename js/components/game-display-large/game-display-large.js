@@ -22,14 +22,14 @@ export class GameDisplayLarge extends Component {
 
     render() {
         return (
-            <div className="product-box">
+            <div className="row product-box">
                 {   this.game.selected &&
                     <div className="product-box__grey-out"></div>
                 }
-                <div className="product-box__cover-container">
+                <div className="col-xs-4 product-box__cover-container">
                     <img src={this.game.image} className="product-box__cover-container--cover-img"/>
                 </div>
-                <div className="product-box__text">
+                <div className="col-xs-8 product-box__text">
                     <p className="product-box__text--title">{this.game.title}</p>
                     <p className="product-box__text--blurb">{this.game.blurb}</p>
                     <div className="product-box__text__price-box">

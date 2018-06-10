@@ -27,9 +27,9 @@ export class Store extends Component {
                 <div className="store__product-display">
                     { this.state.games &&
                         <div>
-                            <div className="store__product-display__row store__product-display__row--row1">
+                            <div className="store__product-display__row">
                                 {
-                                    this.state.games.slice(0,2).map((game, index) =>
+                                    this.state.games.map((game, index) =>
                                         <GameDisplayLarge 
                                             key={index}
                                             game={game}
@@ -37,7 +37,7 @@ export class Store extends Component {
                                     )
                                 }
                             </div>
-                            <div className="store__product-display__row store__product-display__row--row2">
+                            {/* <div className="row store__product-display__row store__product-display__row--row2">
                                 {
                                     this.state.games.slice(2,4).map((game, index) => 
                                         <GameDisplayLarge 
@@ -46,7 +46,7 @@ export class Store extends Component {
                                             addToBasket={this.state.addToBasket}/>
                                     )
                                 }
-                            </div>
+                            </div> */}
                         </div>
                     }
                 </div>
